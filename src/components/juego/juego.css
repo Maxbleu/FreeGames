@@ -1,0 +1,35 @@
+
+img {
+    max-width: 100%;
+    display: block;
+  }
+  
+figure {
+  margin: 0;
+  display: grid;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  border : 1px solid grey;
+  background-color: lightgray;
+  height: 370px;
+  width: 290px;
+}
+
+figure > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+  justify-self: center;
+}
+
+ul{
+  list-style: none;
+}
+
+.juTitulo{
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+.desJuego{
+  margin-left: 13%;
+}
