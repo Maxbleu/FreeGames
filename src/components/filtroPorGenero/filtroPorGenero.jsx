@@ -13,8 +13,8 @@ const FiltroPorGenero = () => {
 
     const guardarSelecionadoGenero = useContext(AccionesDeFiltradoContext).guardarSelecionadoGenero;
 
-    function mostrarGenero(value){
-        return <option key={value.id} value={value}>{value}</option>
+    function mostrarGenero(value, index){
+        return <option key={index} value={value}>{value}</option>
     }
 
     function asignarFiltroPorGenero(event){

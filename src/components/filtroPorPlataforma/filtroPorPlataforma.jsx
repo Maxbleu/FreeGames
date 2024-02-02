@@ -13,8 +13,8 @@ const FiltroPorPlataforma = () => {
 
     const guardarSelecionadaPlataforma = useContext(AccionesDeFiltradoContext).guardarSelecionadaPlataforma;
 
-    function mostrarPlataforma(value){
-        return <option value={value}>{value}</option>
+    function mostrarPlataforma(value, index){
+        return <option key={index} value={value}>{value}</option>
     }
 
     function asignarFiltroPorPlataforma(event){

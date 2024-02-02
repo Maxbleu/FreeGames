@@ -3,8 +3,11 @@ import React from "react";
 import './listaJuegos.css'
 /**     COMPONENETE     */
 import Juego from "../juego/juego";
+import NoHayElementosDisponibles from "../noHayElementosDisponibles/noHayElementosDisponibles";
 
 const ListaJuegos = (props) => {
+
+    const listaJuegos = props.obtenerListaJuegos();
 
     function mostrarJuego(value){
         return <Juego 
@@ -22,7 +25,13 @@ const ListaJuegos = (props) => {
 
         <div className="listaJuegos">
 
-            {props.obtenerListaJuegos().map(mostrarJuego)}
+            {
+                listaJuegos.length !== 0 ? (
+                    listaJuegos.map(mostrarJuego)
+                ) : (
+                    <NoHayElementosDisponibles></NoHayElementosDisponibles>
+                )
+            }
 
         </div>
 
